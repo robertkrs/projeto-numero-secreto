@@ -10,6 +10,7 @@ function onSpeak(e){
     const chute = e.results[0][0].transcript;
 
     exibeChuteNaTela(chute);
+    verificaChute(chute);
 }
 
 function exibeChuteNaTela(chute){
@@ -18,3 +19,5 @@ function exibeChuteNaTela(chute){
         <span class='box'>${chute}</span>
     `
 }
+
+recognition.addEventListener('end', () => recognition.start);
